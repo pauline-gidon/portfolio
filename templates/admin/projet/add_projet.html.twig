@@ -1,0 +1,18 @@
+{% extends 'admin/_layout.html.twig' %}
+
+{% block title %}Ajouter un projet{% endblock %}
+
+{% block body %}
+{% include 'utils/_flashes.html.twig' %}
+
+<div class="p-5 contact-form wrap radius">
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_rest(form) }}
+        <input type="submit" value="Enregistrer" class="btn-hover color">
+  
+    {{ form_end(form) }}
+</div>
+
+    
+{% endblock %}

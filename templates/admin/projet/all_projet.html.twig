@@ -1,0 +1,23 @@
+{% extends 'admin/_layout.html.twig' %}
+
+{% block title %}Toutes les projet{% endblock %}
+
+{% block body %}
+    {% include 'utils/_flashes.html.twig' %}
+
+    <div class="containerCenter technoListe radius">
+        <ul>
+            {% for projet in projets %}
+                <li class="fc">{{ projet.nom }}
+                        <a href="{{ path('projet_edit', {id: projet.id}) }}" title="Modifier un projet" class="left-auto"><i class="fas fa-edit"></i></a>
+
+                        <a href="{{ path('projet_delete', {id: projet.id}) }}" title="Supprimer un projet"><i 
+                        class="fas fa-trash-alt"></i></a>
+
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ path('nouveau_projet') }}" title="Ajouter un projet" class="btn">Ajouter un projet</a>
+    </div>
+    
+{% endblock %}

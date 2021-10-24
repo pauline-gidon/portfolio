@@ -1,0 +1,21 @@
+{% extends 'site/_layout.html.twig' %}
+{% block title %}Contact{% endblock %}
+{% block body %}
+{% include 'utils/_flashes.html.twig' %}
+<div class="p-5 contact-form wrap radius">
+    {{ form_start(our_form) }}
+        <div class="wrap form-group radius">
+            {{ form_row(our_form.name, {'attr': {'class': 'form-control'}}) }}
+        
+            {{ form_row(our_form.email, {'attr': {'class': 'form-control'}}) }}
+
+            {{ form_row(our_form.message, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+    
+        <input type="submit" value="Envoyer" class="btn-hover color">
+  
+    {{ form_end(our_form) }}
+</div>
+
+{% endblock %}

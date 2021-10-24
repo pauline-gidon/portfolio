@@ -1,0 +1,19 @@
+{% extends 'admin/_layout.html.twig' %}
+
+{% block title %}Modifier la techno{% endblock %}
+{% block body %}
+
+    <div class="p-5 contact-form wrap radius">
+        <h1 class="titleForm">Modifier la techno</h1> 
+        {{ form_start(form) }}
+        <div class="wrap form-group radius">
+            {{ form_widget(form) }}
+
+        </div>
+
+    
+        <input type="submit" value="Enregistrer" class="btn-hover color">
+  
+    {{ form_end(form) }}
+</div>
+{% endblock %}

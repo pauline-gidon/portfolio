@@ -1,0 +1,194 @@
+@import "app";
+
+@media screen and (max-width: 965px){
+    .wrap {
+		width: 95%;
+	}
+    nav ul {
+        display: block!important;
+        padding-left: 0;
+    }
+    nav li {
+		width: 100%;
+		border-bottom: solid 1px #999;
+        padding: 0;
+	}
+	nav li:last-child {
+		border: none;
+        padding-bottom: 15px;
+	}
+	nav a {
+		padding: 0 0 2px;
+	}
+
+	#burger {
+		position: absolute;
+		top: 15px;
+		right: 25px;
+		width: 40px;
+		height: 40px;
+		display: block;
+		cursor: pointer;
+		opacity: 0;
+		z-index: 3;
+	}
+	#burger + label {
+		display: block;
+		padding: 0 0 10px 50px;
+		background-image: url(../../public/image/burgerSprite.png);
+		background-repeat: no-repeat;
+		background-size: 40px;
+		background-position: left top;
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		z-index: 2;
+		transition: All 0.2s ease;
+	}
+	header {
+		padding-top: 70px;
+	}
+	#burger:checked + label {
+		background-position: left bottom;
+	}
+	header nav {
+		display: none;
+	}
+	#burger:checked ~ nav {
+		display: block;
+	}
+
+    .h100 {
+        display: block;
+        width: 100%;
+        min-height: auto;
+    }
+    .photo, .vide {
+        display: none;
+    }
+    .sectionPresentation{
+        padding: 150px 40px 50px;
+        h1, p, a{
+            margin: 0 auto;
+            width: 100%;
+            color:$brown-b;
+            padding-bottom: 15px;
+        }
+        h1 {
+            padding-top: 0;
+        }
+    }
+    .qrCode {
+        background: inherit;
+    }
+    .containnerPicmentocolG {
+        background: $aciduler;
+        padding: 50px 0;
+    }
+    .xl62, .xl33 {
+        width: 100%;
+    }
+    .xl38, .xl66 {
+        width: 100%;
+    }
+    .vh50{
+        height: auto;
+    }
+    .d-b {
+        display: block;
+    }
+    .containerCenter {
+        position: initial;
+        transform: initial;
+        padding: 40px;
+    }
+    .etagere, .coffre, .gravure {
+        display: none;
+    }
+    .containerFormation {
+        padding: 40px;
+    }
+    .tableronde{
+
+        background-position: top;
+    }
+    .tabs {
+
+        width: 100%;
+    }
+    .sectionAboutcolD h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .sectionAboutcolD {
+        padding: 50px 40px 100px;
+    }
+    .citron {
+        margin: 80px 90px 0px;
+    }
+    .sectionAboutcolG div:first-child, .boxorange, .boxblue {
+        height: 500px;
+    }
+    .cardP {
+        width: 48%;
+    }
+    .qrCode .my-qrcode {
+        margin: 89px auto;
+    }
+}
+@media screen and (max-width: 584px){
+    .cardP {
+        width: 95%;
+        margin: 30px auto;
+    }
+    .sectionAboutcolD p {
+        width: 95%;
+    }
+    .sectionAboutcolD h3 {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 480px){
+
+    .sectionPresentation {
+        h1 {
+            font-size: 40px;
+        }
+    }
+    .sectionAboutcolD h3, .sectionAboutcolD p {
+        width: 100%;
+    }
+    .sectionAboutcolG div:first-child, .boxorange, .boxblue {
+        height: 230px;
+    }
+    .containnerCitron {
+        display: block;
+    }
+    .citron {
+        margin: 70px auto 110px;
+    }
+    .spancreation {
+        position: relative;
+        left: -13px;
+    }
+    .sectionAboutcolD {
+        padding: 50px 40px 20px;
+    }
+    .sectionAboutcolD h3, .sectionAboutcolD h3 {
+        font-size: 40px;
+    }
+    .containerFormation {
+        padding: 20px;
+    }
+    .qrCode .my-qrcode {
+
+        margin: 50px auto 15px;
+    }
+    .qrCode {
+        padding: 60px 40px;
+        p {
+            margin-bottom: 50px;
+        }
+    } 
+
+}

@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+    <header>
+        <input type="checkbox" id="burger">
+        <label for="burger">Menu</label>
+                
+        <nav class="wrap">
+
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <a href="{{ path('admin_index') }}" class="admin" title="Admin">Admin</a>
+            {% else %}
+            <ul class="fc">
+                <li><a href="{{ path('site') }}#presentation" title="About">A propos</a></li>
+                <li><a href="{{ path('site') }}#about" title="About">Réalisations</a></li>
+                <li><a href="{{ path('site') }}#creation" title="Création">Création</a></li>
+                <li><a href="{{ path('site') }}#formation" title="Création">Formation</a></li>
+                <li class="left-auto"><a href="{{ path('contact') }}" title="Contact">Contact</a></li>
+                {# <li class="left-auto"><a href="" title="Espace Client">Espace Admin</a></li> #}
+            </ul>
+            {% endif %}
+
+        </nav>
+    </header>
+{% endblock %}

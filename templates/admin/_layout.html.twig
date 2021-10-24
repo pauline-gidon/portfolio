@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+{# si il y a bien une authentification #}
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <header>
+        <input type="checkbox" id="burger">
+        <label for="burger">Menu</label>
+                
+        <nav class="wrap">
+            <ul class="fc">
+                {# href {{ path('manage_projet') }} #}
+                <li><a href="{{ path('site') }}" title="Site">Accueil</a></li>
+                <li><a href="{{ path('admin_index') }}" title="Admin">Admin</a></li>
+                <li class="left-auto">{{ app.user.email }}</li>
+                {# href {{ path('manage_techno') }} #}
+                <li><a href="{{ path('app_logout') }}" title="Techno">Se déconnecter</a></li>
+            </ul>
+        </nav>
+    </header>
+{% else %}
+
+{% endif %}
+
+{% endblock %}

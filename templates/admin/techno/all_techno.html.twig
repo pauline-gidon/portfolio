@@ -1,0 +1,24 @@
+{% extends 'admin/_layout.html.twig' %}
+
+{% block title %}Toutes les technos{% endblock %}
+
+{% block body %}
+    {% include 'utils/_flashes.html.twig' %}
+
+    <div class="containerCenter technoListe radius">
+        <ul>
+            {% for techno in technos %}
+
+                <li class="fc">{{ techno.nom }}
+                        <a href="{{ path('techno_edit', {id: techno.id}) }}" title="Modifier une techno" class="left-auto"><i class="fas fa-edit"></i></a>
+
+                        <a href="{{ path('techno_delete', {id: techno.id}) }}" title="Supprimer une techno"><i 
+                        class="fas fa-trash-alt"></i></a>
+
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ path('nouvelle_techno') }}" title="Ajouter une nouvelle techno" class="btn">Ajouter une techno</a>
+    </div>
+    
+{% endblock %}

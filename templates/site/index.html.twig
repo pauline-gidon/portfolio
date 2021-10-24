@@ -1,0 +1,226 @@
+{% extends 'site/_layout.html.twig' %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block body %}
+    <main>
+    {# ----------------------section presentation------------------ #}
+        <section class="fc h100" id="presentation">
+
+        {# partie gauche photo#}
+            <div class="xl38 bggradient fc ai-c photo">
+                 <img src="{{ asset('/image/favicon-pg.svg') }}" alt="initial pauline gidon" class="my-photo">
+            </div>
+
+        {# partie droite presentation#}
+            <div class="xl62 sectionPresentation">
+                    <h1 class="h1Me">Hello<br>Moi c’est Pauline&nbsp;!</h1>
+                    <p>Je suis à la recherche d’un partenariat avec une entreprise pour me perfectionner et poursuivre ma formation avec un contrat de professionnalisation dans le développement Web.</p>
+                    <p>Fascinée par ce métier multitâche je continue mon apprentissage en autodidacte en réalisant des projets&nbsp;!</p>
+                    {# <a href="" title="Voir toutes les création numérique">Voir tout les projets</a> #}
+
+                </div>
+            </div>
+        </section>
+    {# ----------------------section About------------------ #}
+        <section class="fc h100" id="about">
+
+        {# partie gauche #}
+            <div class="xl38 sectionAboutcolG">
+                <div class="fc ai-c jc-c boxblue">
+                    <svg viewBox="0 0 960 300" class="svgH2">
+                        <symbol id="s-text1">
+                            <text text-anchor="middle" x="50%" y="80%">About</text>
+                        </symbol>
+
+                        <g class = "g-ants">
+                            <use xlink:href="#s-text1" class="text-copy1"></use>
+                            <use xlink:href="#s-text1" class="text-copy1"></use>
+                            <use xlink:href="#s-text1" class="text-copy1"></use>
+                            <use xlink:href="#s-text1" class="text-copy1"></use>
+                            <use xlink:href="#s-text1" class="text-copy1"></use>
+                        </g>
+                    </svg>
+                </div>
+                 <div class="boxoeuf vide">
+                </div>
+            </div>
+
+        {# partie droite #}
+            <div class="xl62 sectionAboutcolD">
+               
+                <h3>Créations</h3>
+                <p>J’adore concevoir et réaliser des projets, déterminée j’arrive toujours au bout&nbsp;!</p>
+                   
+                    {# containner icone #}
+                <div class="fc ai-c jc-c containnerCitron">
+                    <div class="citron">
+                        <a href="#creation" class="Alogo">
+                            <svg class="icone">
+                                <use xlink:href="{{ asset('/image/sprite.svg#laptop') }}">
+                            </svg>
+                            <span class="spancreation">création numérique</span>
+                        </a>
+                    </div>
+                    <div class="citron">
+                        <a href="#bois" class="Alogo">
+                            <svg class="icone">
+                                <use xlink:href="{{ asset('/image/sprite.svg#marteau') }}">
+                            </svg>
+                            <span class="spancreation">création matérielle</span>
+                        </a>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+    {# ----------------------section picmento------------------ #}
+        <section class="fc h100" id="creation">
+            <div class="xl62 containnerPicmentocolG">
+                <div class="containerCenter">
+                    <h2>Picmento</h2>
+                    <p>Ma première réalisation numérique, un projet crée From Scratch qui continue de vivre et qui pourrait avoir un bel avenir. Une création mener de A à Z en passant par beaucoup de réflexion sur les concurrents, les personas, les fonctionnalités à développer, les freins des utilisateurs le design, le SEO... Un réel plaisir d’apprend a développé avec un projet comme celui-ci!</p>
+                    <p class="linkPicmento">Junior et passionnée venez découvrir mon projet : https://picmento.fr</p>
+                </div>
+            </div>
+            <div class="xl38">
+                <div class="qrCode vh50 fc jc-c ai-c">
+                    <div>
+                        <img src="{{ asset('/image/QR-PICMENTO-brown.svg') }}" alt="qrcode picmento" class="my-qrcode">
+                        <p>Sur smarphone aussi c’est sympa !</p>
+                    </div>
+                </div>
+                <div class="boxoeuf vh50 vide"></div>
+            </div>
+        </section>
+    {# ---------------------------card projets--------------------------- #}
+    <section class="wrap fc jc-sb containerProjet">
+        {% for projet in projets %}
+        
+            <div class="cardP">
+                <div class="cardP-inner">
+                {# style="background: url({{ asset('uploads/' ~ projet.media) }})" #}
+                    <div class="cardP-front" style="background: linear-gradient( to right bottom, rgba(26,133,151,0.7),rgba(232,214,194,0.7)),url({{ asset('uploads/' ~ projet.media) }} ); background-size: cover; ">
+                        {# <div class="cardP-content"> #}
+                            <h2 class="titleCard">{{ projet.nom }}</h2>
+                            {# <img src="{{ asset('/uploads/' ~ projet.media) }}" alt="image du projet" class="imgCard"> #}
+                        {# </div> #}
+                    </div>
+                    <div class="cardP-back">
+                        <p>{{ projet.description }}</p>
+                        {% if projet.nom != "Portfolio" %}
+                        
+                           <pre>
+                                {{ dump(projet) }}
+                            </pre>
+                            
+                        
+                        <a href="{{projet.url}}">lien vers le site</a>
+                        {% endif %}
+                        <ul>
+
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+    </section>
+    {# ----------------------section Création------------------ #}
+        <section id="bois">
+            <div class="fc d-b">
+                <div class="xl33 vh50 boxorange fc ai-c jc-c">
+                    <svg viewBox="0 0 960 300" class="svgH2">
+                        <symbol id="s-text2">
+                            <text text-anchor="middle" x="50%" y="80%">Créations</text>
+                        </symbol>
+
+                        <g class = "g-ants">
+                            <use xlink:href="#s-text2" class="text-copy2"></use>
+                            <use xlink:href="#s-text2" class="text-copy2"></use>
+                            <use xlink:href="#s-text2" class="text-copy2"></use>
+                            <use xlink:href="#s-text2" class="text-copy2"></use>
+                            <use xlink:href="#s-text2" class="text-copy2"></use>
+                        </g>
+                    </svg>
+                   
+
+                </div>
+                <div class="xl66 vh50 coffre">
+                </div>
+            </div>
+            <div class="fc h-100 d-b">
+                <div class="xl33 boxoeuf videbois">Parce que j'adore travailler avec de la récupération de bois !</div>
+                <div class="xl33 etagere"></div>
+                <div class="xl33">
+                    <div class="vh50 tableronde"></div>
+                    <div class="vh50 gravure"></div>
+                </div>
+            </div>
+        </section>
+    {# ----------------------section formation------------------ #}
+    <section class="h100 fc" id="formation">
+        <div class="xl33">
+            <div class="vh50 boxblue fc ai-c jc-c">
+                        <svg viewBox="0 0 960 300" class="svgH2">
+                        <symbol id="s-text3">
+                            <text text-anchor="middle" x="50%" y="80%">Formation</text>
+                        </symbol>
+
+                        <g class = "g-ants">
+                            <use xlink:href="#s-text3" class="text-copy3"></use>
+                            <use xlink:href="#s-text3" class="text-copy3"></use>
+                            <use xlink:href="#s-text3" class="text-copy3"></use>
+                            <use xlink:href="#s-text3" class="text-copy3"></use>
+                            <use xlink:href="#s-text3" class="text-copy3"></use>
+                        </g>
+                    </svg>
+            </div>
+            <div class="vh50 boxoeuf vide"></div>
+            </div>
+            <div class="xl66 boxgrad-c fc ai-c jc-c containerFormation">
+                <div class="tabs">
+                    <div class="tab">
+                        <input type="checkbox" id="chck1" class="accordeon">
+                        <label class="tab-label" for="chck1">2021</label>
+                        <div class="tab-content">
+                            <p>ECOLE - ARIES BRASSART<br>L'école des métiers de la création</p>
+                            <p>Développeur Web et Web Mobile (1 an)</p>
+                        </div>
+                     </div>
+                    <div class="tab">
+                        <input type="checkbox" id="chck2" class="accordeon">
+                        <label class="tab-label" for="chck2">2011</label>
+                        <div class="tab-content">
+                            <p>AFPI - ALTERNANCE 2011</p>
+                            <p>CQPI : conducteur d’équipements industriels (CEI)</p>
+                            <p>CQPM : conducteur de systèmes de production automatisée
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <input type="checkbox" id="chck3" class="accordeon">
+                        <label class="tab-label" for="chck3">2008</label>
+                        <div class="tab-content">
+                            <p>ECOLE - JACQUES BREL</p>
+                            <p>Bac Pro Secrétariat</p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <input type="checkbox" id="chck4" class="accordeon">
+                        <label class="tab-label" for="chck4">2006</label>
+                        <div class="tab-content">
+                            <p>ECOLE - JACQUES BREL</p>
+                            <p>Bep Secrétariat</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+   
+</main>
+
+
+{% endblock %}

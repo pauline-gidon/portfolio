@@ -1,0 +1,720 @@
+@import './variables';
+@import "./reset";
+@import "./starter";
+
+
+@import "~bootstrap/scss/bootstrap";
+
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+    background-color: $sable;
+    font-family: 'Comfortaa', cursive !important;
+    color: $brown-b;
+    font-size: 22px;
+}
+h1, h2{
+    font-family: 'Comfortaa', cursive !important;
+
+}
+// main {
+//     display: flex;
+//     flex-direction: column;
+// }
+a{
+    color: #1A8597;
+    display: block;
+    text-decoration: none;
+}
+li { list-style-type: none;
+    padding: 10px;
+}
+ul {
+    margin-bottom: 0;
+}
+header{
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top : 0;
+    width: 100%;
+    background-color: $sable;
+    border-bottom: thick double $brown-b;
+}
+.wrap {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.left-auto {
+    margin-left: auto;
+}
+.radius{
+    border-radius: 8px ;
+}
+.solide {
+    border: solid 1px gray;
+}
+.h100{
+    min-height: 100vh;
+}
+.xl38{
+    width: 38vw;
+}
+.xl62{
+    width: 62vw;
+}
+.xl33{
+    width: 33.3%;
+}
+.xl33{
+    width: 33.3%;
+}
+.xl66{
+    width: 66.7%;
+}
+.bgbeige{
+    background: #F0E0C9;
+}
+.bggradient{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ae8f73+0,e8d6c2+100 */
+background: rgb(174,143,115); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(174,143,115,1) 0%, rgba(232,214,194,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(174,143,115,1) 0%,rgba(232,214,194,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(174,143,115,1) 0%,rgba(232,214,194,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ae8f73', endColorstr='#e8d6c2',GradientType=0 ); /* IE6-9 */
+    img{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+.sectionPresentation{
+    background: $beige;
+    h1, p, a{
+        margin: 0 auto;
+        width: 50%;
+        color:$brown-b;
+        padding-bottom: 15px;
+    }
+    h1{
+        padding-top :20%;
+        font-size: 50px;
+    }
+    p{
+        font-size: 22px;
+    }
+    a{
+        color: inherit;
+        display: block;
+        font-size: 14px;
+        text-decoration: underline;
+        text-align: center;
+    }
+}
+.boxblue{
+    background: $blue;
+    
+}
+.boxoeuf{
+    background-color: $oeuf;
+}
+.boxorange {
+    background: $orange;
+}
+// ------------------------------about-------------------------------
+.sectionAboutcolG{
+    div:first-child{
+        height: 62vh;
+    }
+    div:nth-child(2) {
+        height: 38vh;
+    }
+}
+.sectionAboutcolD {
+    h3, p {
+        width: 50%;
+        margin: 0 auto;
+    }
+    h3{
+        color: $brown-b;
+        font-size: 50px;
+        margin-top: 20%;
+    }
+}
+.sectionpetitepartie{
+    height: 50vh;
+}
+
+.icone{
+    width: 70px;
+    height: 70px;
+    fill: $blue;
+    margin-left: 60px;
+}
+.citron{
+    background: $oeuf;
+    border-radius: 0 50% 0 50%;
+    width: 100px;
+    height: 100px;
+    margin: 150px 90px;
+}
+.Alogo{
+    display: block;
+}
+.spancreation {
+    display: block;
+    font-size: 14px;
+    width: 160%;
+    padding-top: 44px;
+}
+.textAbout {
+    max-width: 500px;
+    margin: 0 auto;
+    h3{
+        color: $brown-b;
+    }
+}
+// ---------------------------picmento
+.containnerPicmentocolG { 
+    position: relative;
+    h2{
+        font-size: 50px;
+        text-align: center;
+        padding-bottom: 30px;
+        color: inherit;
+    }
+    p{
+       
+        margin: 0 auto;
+    }
+    .linkPicmento{
+        padding-top: 30px;
+       
+    }
+    
+}
+
+.qrCode{
+    background: $aciduler;
+    .my-qrcode{
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+    }
+    p{
+        text-align: center;
+    }
+}
+.vh50{
+    height: 50vh;
+}
+.boxorange{
+    h2{
+        font-size: 70px;
+        color: $white;
+    }
+}
+.boxgrad-c {
+    background: $grad-c;
+}
+// ---------------------------création bois------------------------
+.videbois {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+.coffre{
+    background-image: url(../../public/image/coffre.jpg);
+    background-position: top -40px left 0;
+    background-size: cover;
+}
+.etagere{
+    background-image: url(../../public/image/etagere.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.tableronde{
+    background-image: url(../../public/image/table.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.gravure{
+    background-image: url(../../public/image/gravure.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+//----------------------------- animation svg h2 ---------------------
+.svgH2 {
+    display: block;
+    font-size: 8em;
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.text-copy1, .text-copy2, .text-copy3  {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy1:nth-child(1), .text-copy2:nth-child(1), .text-copy3:nth-child(1){
+	stroke: #FFF;
+	animation-delay: -1;
+}
+
+.text-copy1:nth-child(2), .text-copy2:nth-child(2), .text-copy3:nth-child(2){
+	stroke: #FFF;
+	animation-delay: -2s;
+}
+
+.text-copy1:nth-child(3), .text-copy2:nth-child(3), .text-copy3:nth-child(3){
+	stroke: #FFF;
+	animation-delay: -3s;
+}
+
+.text-copy1:nth-child(4), .text-copy2:nth-child(4), .text-copy3:nth-child(4){
+	stroke: #FFF;
+	animation-delay: -4s;
+}
+
+.text-copy1:nth-child(5), .text-copy2:nth-child(5), .text-copy3:nth-child(5){
+	stroke: #FFF;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+// h2 {
+//     font-size: 71px;
+//     color: $white;
+// }
+
+//------------------------------------- formation accordeon
+
+.accordeon {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  // Layout
+  .row {
+    display:flex;
+    .col {
+      flex:1;
+      &:last-child {
+        margin-left: 1em;
+      }
+    }
+  }
+  /* Accordion styles */
+  .tabs {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);
+    width: 50%;
+    margin: 0 auto;
+  }
+  .tab {
+    width: 100%;
+    color: $sable;
+    overflow: hidden;
+    &-label {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      background: $grad-b;
+      font-weight: bold;
+      cursor: pointer;
+      /* Icon */
+      &:hover {
+        background: darken($grad-b, 10%);
+      }
+      &::after {
+        content: "\276F";
+        width: 1em;
+        height: 1em;
+        text-align: center;
+        transition: all .35s;
+      }
+    }
+    &-content {
+      max-height: 0;
+      padding: 0 1em;
+      color: $blue;
+      background: $sable;
+      transition: all .35s;
+    }
+    &-close {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1em;
+      font-size: 0.75em;
+      background: $blue;
+      cursor: pointer;
+      &:hover {
+        background: darken($blue, 10%);
+      }
+    }
+  }
+
+  // :checked
+  input:checked {
+    + .tab-label {
+      background: darken($blue, 10%);
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+}
+//------------------------------------------formulaire de contact
+.contact-form {
+    width: 80%;
+    margin: 150px auto;
+    background: $grad-c;
+}
+.form-group{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.btn-hover:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+.btn-hover.color {
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+    background-image: linear-gradient(to right,  rgba(26,133,151,1) 36%,rgba(26,133,151,1) 36%,rgba(172,141,113,1) 60%); 
+
+}
+.form-control {
+    padding: 0.575rem 0.75rem;
+    font-size: 12px;
+}
+textarea.form-control {
+    min-height: calc(10.5em + 5.75rem + 10px);
+}
+.alert {
+    top: 100px !important;
+    background: #cce9cc !important;
+    border-radius: 0 !important;
+
+}
+.alert-danger{
+    background: #e89696 !important;
+    color: #FFF;
+    top: 0px !important;
+}
+.containerCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+//formulaire generique
+.TitreForm{
+    color: inherit;
+    padding-bottom: 20px;
+}
+
+
+#burger, #burger + label {
+	display: none;
+}
+// -----------------------------------------------REGISTER-------------------------------------------------
+.register {
+    font-size: 30px;
+    padding-top: 250px;
+    text-align: center;
+    color: $brown-b;
+}
+
+//******************************************** **********************************************************Cardadmin************************************************************************************************************************************************************************************************************************************************************************************************
+
+.containnerCardAdmin {
+    // background: url(../../public/image/rainbow-gradient.jpg);
+    // background-position: cover;
+    // background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: row;
+}
+
+.carD {
+    width:300px;
+    height:380px;
+    perspective: 1000px;
+    text-align: center;
+    margin: 270px 100px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%)
+}
+
+.card-inner {
+    position:relative;
+    width: 100%;
+    height:100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.carD:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.card-front, .card-back {
+    position:absolute;
+    height:100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding:16px;
+    border-radius:8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.card-front {
+    // background-image:url('images/f');
+    background-size:cover;
+    background-position:center center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+   
+}
+.card-front:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: linear-gradient(0deg, $blue, transparent);
+}
+.card-front .card-content {
+    z-index: 1;
+    color:white;
+}
+.card-front .card-content h2 {
+    color:#ececec;
+}
+.card-back {
+    transform: rotateY(180deg);
+    background:white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+  }
+  
+
+  
+  .card-back .card-icons {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  .card-back a:hover {
+    cursor:pointer;
+    color:$grad-b;
+  }
+  .card-back ul {
+      padding-left: 0;
+
+  }
+  .card-front {
+    transition: opacity .6s;
+  }
+  
+  .carD:hover .card-front {
+    opacity:0;
+  }
+  .eye{
+      margin-top: 25px;
+      i {
+          font-size: 50px;
+      }
+  }
+
+//   -*************************techno liste********************
+
+.technoListe {
+
+    background-color: $blue;
+    padding: 30px;
+    width: 400px;
+    ul{
+        padding-left: 0 !important;
+        color: $white;
+        li {
+            margin-right: 20px;
+        }
+        i {
+            color: $white;
+        }
+        i:hover{
+            color: $grad-c;
+        }
+        a {
+            --shadow: rgba(0, 9, 61, .2);
+            background: #2c003e;
+            box-shadow: 10px 9px 12px -2px rgba(235,235,235,0.33);
+            -webkit-box-shadow: 10px 9px 12px -2px rgba(235,235,235,0.33);
+            -moz-box-shadow: 10px 9px 12px -2px rgba(235,235,235,0.33);
+            height: 40px;
+            width: 40px;
+            margin-right: 7px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 var(rgba(0, 9, 61, .2), 4px) var(--shadow-blur, 8px) 
+        }
+    }
+}
+
+// editer
+.titleForm {
+    text-align: center;
+    color: $white;
+}
+// -----------------------------------------------------------------------------                                                      PROJET                                                                -----------------------------------------------------------------------------
+.containerProjet {
+ flex-wrap: wrap;
+ padding: 80px 0;
+}
+
+.cardP {
+    width: 30%;
+    height: 390px;
+    perspective: 1000px;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.cardP-inner {
+    position:relative;
+    width: 100%;
+    height:100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+}
+
+.cardP:hover .cardP-inner {
+    transform: rotateY(180deg);
+}
+.cardP-front, .cardP-back {
+    position:absolute;
+    height:100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding:16px;
+    border-radius:8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: top ;
+}
+.cardP-front {
+    // background-image:url('images/f');
+    // background-size:cover;
+    // background-position:center center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    // clip-path: polygon(0 0, 100% 0, 100% 85%, 57% 85%, 50% 93%, 43% 85%, 0 85%);
+   
+    
+}
+.cardP-front:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    // background: linear-gradient(0deg, $blue, transparent);
+    // border: solid 1px red;
+    // clip-path: polygon(0 0, 100% 0, 100% 85%, 57% 85%, 50% 93%, 43% 85%, 0 85%)
+}
+.cardP-front .cardP-content {
+    z-index: 1;
+    color:white;
+    // background-color: red;
+}
+.cardP-front .cardP-content h2 {
+    color:#ececec;
+}
+.cardP-back {
+    transform: rotateY(180deg);
+    background:white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+  }
+
+  .cardP-front {
+    transition: opacity .6s;
+  }
+  
+  .cardP:hover .cardP-front {
+    opacity:0;
+  }
+  
+
+.titleCard {
+    font-family: 'Lobster', cursive !important;
+    color: $white;
+    font-size: 65px;
+    text-shadow: $blue 1px 0 10px;
+
+  }
