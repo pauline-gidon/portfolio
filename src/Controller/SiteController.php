@@ -29,9 +29,8 @@ class SiteController extends AbstractController
      */
     public function index(): Response
     {
-        $projets = $this->repository->allProjetAndTechno();
-        dump($projets);
-        die();
+        $projets = $this->repository->findAll();
+
         return $this->render('site/index.html.twig',[
             'projets' => $projets
         ]);

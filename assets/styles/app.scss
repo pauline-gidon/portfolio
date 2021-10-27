@@ -7,9 +7,9 @@
 
 *::after,
 *::before {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 body {
     background-color: $sable;
@@ -82,11 +82,11 @@ header{
 }
 .bggradient{
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ae8f73+0,e8d6c2+100 */
-background: rgb(174,143,115); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(174,143,115,1) 0%, rgba(232,214,194,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(174,143,115,1) 0%,rgba(232,214,194,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(174,143,115,1) 0%,rgba(232,214,194,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ae8f73', endColorstr='#e8d6c2',GradientType=0 ); /* IE6-9 */
+    background: rgb(174,143,115); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(174,143,115,1) 0%, rgba(232,214,194,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(174,143,115,1) 0%,rgba(232,214,194,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(174,143,115,1) 0%,rgba(232,214,194,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ae8f73', endColorstr='#e8d6c2',GradientType=0 ); /* IE6-9 */
     img{
         width: 70%;
         margin: 0 auto;
@@ -181,19 +181,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ae8f73', end
 // ---------------------------picmento
 .containnerPicmentocolG { 
     position: relative;
-    h2{
+    h3{
         font-size: 50px;
         text-align: center;
         padding-bottom: 30px;
         color: inherit;
     }
     p{
-       
+    
         margin: 0 auto;
     }
     .linkPicmento{
         padding-top: 30px;
-       
+    
     }
     
 }
@@ -309,91 +309,94 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ae8f73', end
     position: absolute;
     opacity: 0;
     z-index: -1;
-  }
+}
   // Layout
-  .row {
+.row {
     display:flex;
     .col {
-      flex:1;
-      &:last-child {
+    flex:1;
+    &:last-child {
         margin-left: 1em;
-      }
     }
-  }
-  /* Accordion styles */
-  .tabs {
+    }
+}
+/* Accordion styles */
+.tabs {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);
     width: 50%;
     margin: 0 auto;
-  }
-  .tab {
+}
+.tab {
     width: 100%;
     color: $sable;
     overflow: hidden;
     &-label {
-      display: flex;
-      justify-content: space-between;
-      padding: 1em;
-      background: $grad-b;
-      font-weight: bold;
-      cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: $grad-b;
+    font-weight: bold;
+    cursor: pointer;
       /* Icon */
-      &:hover {
+    &:hover {
         background: darken($grad-b, 10%);
-      }
-      &::after {
+    }
+    &::after {
         content: "\276F";
         width: 1em;
         height: 1em;
         text-align: center;
         transition: all .35s;
-      }
+    }
     }
     &-content {
-      max-height: 0;
-      padding: 0 1em;
-      color: $blue;
-      background: $sable;
-      transition: all .35s;
+    max-height: 0;
+    padding: 0 1em;
+    color: $blue;
+    background: $sable;
+    transition: all .35s;
     }
     &-close {
-      display: flex;
-      justify-content: flex-end;
-      padding: 1em;
-      font-size: 0.75em;
-      background: $blue;
-      cursor: pointer;
-      &:hover {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: $blue;
+    cursor: pointer;
+    &:hover {
         background: darken($blue, 10%);
-      }
     }
-  }
+    }
+}
 
   // :checked
-  input:checked {
+input:checked {
     + .tab-label {
-      background: darken($blue, 10%);
-      &::after {
+    background: darken($blue, 10%);
+    &::after {
         transform: rotate(90deg);
-      }
     }
-  ~ .tab-content {
+    }
+~ .tab-content {
     max-height: 100vh;
     padding: 1em;
-  }
 }
+}
+
 //------------------------------------------formulaire de contact
 .contact-form {
     width: 80%;
     margin: 150px auto;
     background: $grad-c;
 }
+
 .form-group{
     padding-top: 30px;
     padding-bottom: 20px;
 }
+
 .btn-hover {
     width: 200px;
     font-size: 16px;
@@ -406,7 +409,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ae8f73', end
     text-align:center;
     border: none;
     background-size: 300% 100%;
-
     border-radius: 50px;
     -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -427,26 +429,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ae8f73', end
 .btn-hover.color {
     box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
     background-image: linear-gradient(to right,  rgba(26,133,151,1) 36%,rgba(26,133,151,1) 36%,rgba(172,141,113,1) 60%); 
-
 }
+
 .form-control {
     padding: 0.575rem 0.75rem;
     font-size: 12px;
 }
+
 textarea.form-control {
     min-height: calc(10.5em + 5.75rem + 10px);
 }
+
 .alert {
     top: 100px !important;
     background: #cce9cc !important;
     border-radius: 0 !important;
 
 }
+
 .alert-danger{
     background: #e89696 !important;
     color: #FFF;
     top: 0px !important;
 }
+
 .containerCenter{
     position: absolute;
     top: 50%;
@@ -459,7 +465,6 @@ textarea.form-control {
     color: inherit;
     padding-bottom: 20px;
 }
-
 
 #burger, #burger + label {
 	display: none;
@@ -503,6 +508,7 @@ textarea.form-control {
 .carD:hover .card-inner {
     transform: rotateY(180deg);
 }
+
 .card-front, .card-back {
     position:absolute;
     height:100%;
@@ -522,8 +528,9 @@ textarea.form-control {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-   
+
 }
+
 .card-front:before {
     content: '';
     position: absolute;
@@ -545,40 +552,43 @@ textarea.form-control {
     text-align: center;
     display: flex;
     flex-direction: column;
-    // align-items: center;
+    align-items: center;
     justify-content: center;
-  }
-  
+}
 
-  
-  .card-back .card-icons {
+
+
+.card-back .card-icons {
     display:flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  
-  .card-back a:hover {
+
+.card-back a:hover {
     cursor:pointer;
     color:$grad-b;
-  }
-  .card-back ul {
-      padding-left: 0;
+}
 
-  }
-  .card-front {
+.card-back ul {
+    padding-left: 0;
+
+}
+
+.card-front {
     transition: opacity .6s;
-  }
-  
-  .carD:hover .card-front {
+}
+
+.carD:hover .card-front {
     opacity:0;
-  }
-  .eye{
-      margin-top: 25px;
-      i {
-          font-size: 50px;
-      }
-  }
+}
+
+.eye{
+    margin-top: 25px;
+    i {
+        font-size: 50px;
+    }
+}
 
 //   -*************************techno liste********************
 
@@ -624,8 +634,8 @@ textarea.form-control {
 }
 // -----------------------------------------------------------------------------                                                      PROJET                                                                -----------------------------------------------------------------------------
 .containerProjet {
- flex-wrap: wrap;
- padding: 80px 0;
+    flex-wrap: wrap;
+    padding: 80px 0;
 }
 
 .cardP {
@@ -648,6 +658,7 @@ textarea.form-control {
 .cardP:hover .cardP-inner {
     transform: rotateY(180deg);
 }
+
 .cardP-front, .cardP-back {
     position:absolute;
     height:100%;
@@ -661,6 +672,7 @@ textarea.form-control {
     // background-repeat: no-repeat;
     // background-position: top ;
 }
+
 .cardP-front {
     // background-image:url('images/f');
     // background-size:cover;
@@ -671,9 +683,8 @@ textarea.form-control {
     justify-content: center;
     overflow: hidden;
     // clip-path: polygon(0 0, 100% 0, 100% 85%, 57% 85%, 50% 93%, 43% 85%, 0 85%);
-   
-    
 }
+
 .cardP-front:before {
     content: '';
     position: absolute;
@@ -695,26 +706,80 @@ textarea.form-control {
 .cardP-back {
     transform: rotateY(180deg);
     background:white;
-    text-align: center;
+    // text-align: center;
     display: flex;
     flex-direction: column;
     // align-items: center;
-    justify-content: center;
-  }
+    // justify-content: center;
+}
 
-  .cardP-front {
+.cardP-front {
     transition: opacity .6s;
-  }
-  
-  .cardP:hover .cardP-front {
+}
+
+.cardP:hover .cardP-front {
     opacity:0;
-  }
-  
+}
 
 .titleCard {
     font-family: 'Lobster', cursive !important;
     color: $white;
     font-size: 65px;
-    text-shadow: $blue 1px 0 10px;
+    text-shadow: #02020280 1px 0 10px;
 
-  }
+}
+
+.containerTechno {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0px;
+    right: 16px;
+    p {
+        font-size: 13px;
+        font-family: Georgia, Times, "New Roman", serif;
+        color: $white;
+        padding: 0 5px;
+    }
+    
+}
+
+.btn-site {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    transform: translate(-50%, 0%); 
+}
+.btn-site:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    box-shadow: none;
+}
+
+.btn-site:focus {
+    outline: none;
+}
+.btn-site.color1 {
+    box-shadow: 0 4px 15px 0 rgba(26,133,151, 0.75);
+    background-image: linear-gradient(to right,  rgba(26,133,151,1) 36%,rgba(26,133,151,1) 36%,$sable 60%); 
+}

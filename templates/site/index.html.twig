@@ -78,7 +78,7 @@
         <section class="fc h100" id="creation">
             <div class="xl62 containnerPicmentocolG">
                 <div class="containerCenter">
-                    <h2>Picmento</h2>
+                    <h3>Picmento</h3>
                     <p>Ma première réalisation numérique, un projet crée From Scratch qui continue de vivre et qui pourrait avoir un bel avenir. Une création mener de A à Z en passant par beaucoup de réflexion sur les concurrents, les personas, les fonctionnalités à développer, les freins des utilisateurs le design, le SEO... Un réel plaisir d’apprend a développé avec un projet comme celui-ci!</p>
                     <p class="linkPicmento">Junior et passionnée venez découvrir mon projet : https://picmento.fr</p>
                 </div>
@@ -96,27 +96,37 @@
     {# ---------------------------card projets--------------------------- #}
     <section class="wrap fc jc-sb containerProjet">
         {% for projet in projets %}
-        
+         {# <pre>
+                                {{ dump(projet.idTechno) }}
+
+                     
+                                {% for techno in projet.idtechno %}
+                                    {{ dump(techno.nom) }}
+                                {% endfor %}
+        </pre> #}
             <div class="cardP">
                 <div class="cardP-inner">
                 {# style="background: url({{ asset('uploads/' ~ projet.media) }})" #}
-                    <div class="cardP-front" style="background: linear-gradient( to right bottom, rgba(26,133,151,0.7),rgba(232,214,194,0.7)),url({{ asset('uploads/' ~ projet.media) }} ); background-size: cover; ">
-                        {# <div class="cardP-content"> #}
+                    <div class="cardP-front" style="background: linear-gradient( to right bottom, rgba(26,133,151,0.7),rgba(167, 167, 167,0.7)),url({{ asset('uploads/' ~ projet.media) }} ); background-size: cover; ">
+                   
                             <h2 class="titleCard">{{ projet.nom }}</h2>
-                            {# <img src="{{ asset('/uploads/' ~ projet.media) }}" alt="image du projet" class="imgCard"> #}
-                        {# </div> #}
+                            <div class="containerTechno">
+                                {% for techno in projet.idtechno %}
+                                   <p>{{ techno.nom }}</p>
+                                {% endfor %}
+                            </div>
                     </div>
                     <div class="cardP-back">
                         <p>{{ projet.description }}</p>
+                        <p class="containerTechno">
+                        
+                         
+                        </p>
+
                         {% if projet.nom != "Portfolio" %}
-                        
-                           <pre>
-                                {{ dump(projet) }}
-                            </pre>
-                            
-                        
-                        <a href="{{projet.url}}">lien vers le site</a>
+                        <a href="{{projet.url}}" class="btn-site color1">lien vers le site</a>
                         {% endif %}
+
                         <ul>
 
                         
