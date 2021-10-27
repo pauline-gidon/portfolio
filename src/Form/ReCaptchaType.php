@@ -34,13 +34,16 @@ class ReCaptchaType extends AbstractType
     {
         $builder->addEventSubscriber(new ReCaptchaValidationListener($this->reCaptcha));
     }
+    
     /**
      * @inheritDoc
      */
     public function buildView(FormView $view, FormInterface $form,   array $options)
     {
         $view->vars['type'] = $options['type'];
-    }    /**
+    } 
+    
+    /**
      * @inheritDoc
      */
     public function configureOptions(OptionsResolver $resolver)

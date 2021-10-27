@@ -23,7 +23,11 @@
         <link rel="icon" type="image/png" href="{{ asset('/image/favicon-pg.svg') }}" />
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        {% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
+        {% block javascripts %} {{ encore_entry_script_tags('app') }} {% endblock %}
+        
+
+
+
     </head>
     <body>
     {% block header %}
@@ -31,10 +35,16 @@
     {% block body %}
     {% endblock %}
 
-    
-    <script type="text/javascript" src="{{ asset('js/recaptcha.js') }}"></script>
-    {# chargement de l'API reCAPTCHA #}
-    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=onGoogleReCaptchaApiLoad&render=explicit&hl={{app.request.locale}}" async defer></script>
+
+
+        <script src="{{ asset('js/recaptcha.js') }}"></script>
+        {# chargement de l'API reCAPTCHA #}
+        {# 
+        <script src="https://www.google.com/recaptcha/api.js?render=6LcQAPgcAAAAAO3KS4UW3nonog1cU3J5EhniwsmM" async defer></script>
+         #}
+        
+              <script src="https://www.google.com/recaptcha/api.js?onload=onGoogleReCaptchaApiLoad&render=explicit&hl={{app.request.locale}}" async defer></script>
+  
 
     </body>
 </html>
