@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Form\ReCaptchaType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\Email;
@@ -42,6 +43,10 @@ class ContactType extends AbstractType
             'label' => 'Message *',
             'attr' => ['rows' => 5],
         ])
+        
+        ->add('captcha', ReCaptchaType::class, [
+            'type' => 'invisible' // (invisible, checkbox)
+         ]);
 
         ;
     }

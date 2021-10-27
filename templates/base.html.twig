@@ -30,6 +30,12 @@
     {% endblock %}
     {% block body %}
     {% endblock %}
+
+    
+    <script type="text/javascript" src="{{ asset('js/recaptcha.js') }}"></script>
+    {# chargement de l'API reCAPTCHA #}
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=onGoogleReCaptchaApiLoad&render=explicit&hl={{app.request.locale}}" async defer></script>
+
     </body>
 </html>
 
